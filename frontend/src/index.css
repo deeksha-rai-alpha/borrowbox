@@ -1,0 +1,253 @@
+/* ==========================================================================
+   BorrowBox — Global Design Tokens & Base Styles
+   Theme reference: light background, bold geometric sans headings,
+   purple accent with a warm orange highlight (from the provided portfolio)
+   ========================================================================== */
+
+:root {
+  /* ---- Color: core palette (named, per design system) ---- */
+  --bg: #fcfbf8;              /* warm off-white page background */
+  --surface: #ffffff;         /* card / panel surface */
+  --surface-tint: #f7f4fb;    /* soft tinted surface (purple-tinged) */
+  --ink: #15131c;             /* near-black, primary text */
+  --ink-muted: #6e6b7a;       /* secondary text */
+  --ink-faint: #a5a2b1;       /* placeholder / disabled text */
+  --border: #eae7f0;          /* hairline borders */
+  --border-strong: #d9d5e3;
+
+  --purple: #8b5cf6;          /* primary accent, from portfolio gradient */
+  --purple-deep: #5b21b6;
+  --purple-tint: #f1ecfd;
+  --orange: #f97316;          /* secondary accent — used sparingly, like the portfolio's dot */
+
+  --success: #16a34a;
+  --success-tint: #e9f7ee;
+  --danger: #dc2626;
+  --danger-tint: #fdecec;
+  --warning: #d97706;
+  --warning-tint: #fdf3e4;
+  --info: #2563eb;
+  --info-tint: #eaf1fd;
+
+  /* ---- Type ---- */
+  --font-base: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Type scale (Elements-of-Typographic-Style-ish ratio ~1.25) */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 3.75rem;
+
+  /* ---- Spacing ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* ---- Radius & shadow ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(21, 19, 28, 0.06), 0 1px 1px rgba(21, 19, 28, 0.04);
+  --shadow-md: 0 8px 24px rgba(21, 19, 28, 0.08), 0 2px 6px rgba(21, 19, 28, 0.05);
+  --shadow-lg: 0 20px 45px rgba(21, 19, 28, 0.14), 0 6px 14px rgba(21, 19, 28, 0.08);
+  --shadow-float: 0 24px 48px rgba(139, 92, 246, 0.18), 0 8px 18px rgba(21, 19, 28, 0.08);
+
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+h1 { font-size: var(--fs-4xl); }
+h2 { font-size: var(--fs-3xl); }
+h3 { font-size: var(--fs-2xl); }
+h4 { font-size: var(--fs-lg); }
+
+p {
+  color: var(--ink-muted);
+}
+
+/* Visible keyboard focus (accessibility) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Layout utilities ---- */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.text-muted { color: var(--ink-muted); }
+.text-center { text-align: center; }
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--border);
+  border: none;
+}
+
+/* Skeleton loading shimmer, used by Loader/skeleton components */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--border) 25%, #f3f1f8 37%, var(--border) 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: var(--radius-md);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive helpers */
+@media (max-width: 900px) {
+  .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+  h1 { font-size: var(--fs-3xl); }
+  h2 { font-size: var(--fs-2xl); }
+}
+
+@media (max-width: 600px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 { grid-template-columns: 1fr; }
+  .container { padding: 0 var(--space-4); }
+  h1 { font-size: var(--fs-2xl); }
+}

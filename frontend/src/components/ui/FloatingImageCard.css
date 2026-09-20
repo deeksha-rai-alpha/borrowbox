@@ -1,0 +1,37 @@
+.bb-float {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: var(--surface-tint);
+  box-shadow: var(--shadow-md);
+  transform: translateY(0);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.bb-float--lg { border-radius: var(--radius-lg); }
+.bb-float--md { border-radius: var(--radius-md); }
+
+.bb-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms ease;
+}
+
+/* Floating hover lift + deepened shadow + subtle image zoom */
+.bb-float:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-float);
+}
+
+.bb-float:hover img {
+  transform: scale(1.06);
+}
+
+/* A slight rotation offset for a hand-placed, "floating" feel on hero visuals */
+.bb-float--offset {
+  transform: rotate(-2deg) translateY(0);
+}
+.bb-float--offset:hover {
+  transform: rotate(0deg) translateY(-6px);
+}

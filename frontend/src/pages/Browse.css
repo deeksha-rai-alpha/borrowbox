@@ -1,0 +1,53 @@
+.bb-browse__header {
+  margin-bottom: var(--space-5);
+}
+
+.bb-browse__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  align-items: center;
+}
+
+.bb-browse__search {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  font-size: var(--fs-base);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bb-browse__search--sm {
+  flex: none;
+  width: 160px;
+  min-width: 140px;
+}
+
+.bb-browse__search:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px var(--purple-tint);
+}
+
+.bb-browse__filters .bb-field {
+  width: 180px;
+}
+
+.bb-browse__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+}
+
+@media (max-width: 700px) {
+  .bb-browse__filters .bb-field,
+  .bb-browse__search--sm {
+    width: 100%;
+  }
+}

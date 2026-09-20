@@ -1,0 +1,71 @@
+.bb-admintable {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.bb-admintable table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.bb-admintable th {
+  text-align: left;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  font-weight: 700;
+  padding: var(--space-3) var(--space-5);
+  background: var(--surface-tint);
+}
+
+.bb-admintable td {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-sm);
+  vertical-align: middle;
+}
+
+.bb-admintable tr.is-removed {
+  opacity: 0.5;
+}
+
+.bb-admintable__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 600;
+}
+
+.bb-admintable__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.bb-admintable__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bb-admintable__item {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.bb-admintable__item:hover {
+  color: var(--purple);
+}

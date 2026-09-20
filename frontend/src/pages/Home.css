@@ -1,0 +1,137 @@
+.bb-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.bb-hero__copy h1 {
+  margin-top: var(--space-3);
+}
+
+.bb-hero__sub {
+  margin-top: var(--space-4);
+  max-width: 480px;
+  font-size: var(--fs-md);
+}
+
+.bb-hero__cta {
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.bb-hero__visual {
+  position: relative;
+  height: 460px;
+}
+
+.bb-hero__visual-main {
+  width: 78%;
+  margin-left: auto;
+}
+
+.bb-hero__visual-small {
+  position: absolute;
+  width: 34%;
+}
+
+.bb-hero__visual-small--one {
+  top: -6%;
+  left: 0;
+}
+
+.bb-hero__visual-small--two {
+  bottom: -4%;
+  left: 8%;
+}
+
+.bb-section-title {
+  margin-bottom: var(--space-6);
+}
+
+/* ---- Categories ---- */
+.bb-categories__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.bb-chip {
+  padding: 0.7rem 1.3rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-strong);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink);
+  transition: background var(--transition-base), color var(--transition-base),
+    border-color var(--transition-base), transform var(--transition-base);
+}
+
+.bb-chip:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ---- Steps ---- */
+.bb-steps__grid {
+  align-items: start;
+}
+
+.bb-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.bb-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.bb-step__num {
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  color: var(--purple);
+}
+
+.bb-step p {
+  font-size: var(--fs-sm);
+}
+
+/* ---- CTA ---- */
+.bb-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+}
+
+.bb-cta h2 {
+  color: #fff;
+}
+
+.bb-cta p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .bb-hero__grid {
+    grid-template-columns: 1fr;
+  }
+  .bb-hero__visual {
+    height: 340px;
+    margin-top: var(--space-5);
+  }
+}

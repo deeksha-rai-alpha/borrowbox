@@ -1,0 +1,87 @@
+.bb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  border-radius: var(--radius-pill);
+  padding: 0.85rem 1.6rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base),
+    transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  will-change: transform;
+}
+
+.bb-btn--sm {
+  padding: 0.6rem 1.15rem;
+  font-size: var(--fs-xs);
+}
+
+.bb-btn--full {
+  width: 100%;
+}
+
+.bb-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Primary: black pill -> on hover, turns purple, lifts and grows slightly */
+.bb-btn--primary {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.bb-btn--primary:hover:not(:disabled) {
+  background: var(--purple);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+.bb-btn--primary:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Outline: transparent with border -> on hover, fills black and grows */
+.bb-btn--outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border-strong);
+}
+.bb-btn--outline:hover:not(:disabled) {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Ghost: minimal text button -> on hover, tints purple */
+.bb-btn--ghost {
+  background: transparent;
+  color: var(--ink-muted);
+  padding: 0.6rem 1rem;
+}
+.bb-btn--ghost:hover:not(:disabled) {
+  background: var(--purple-tint);
+  color: var(--purple-deep);
+  transform: scale(1.03);
+}
+
+/* Danger: for reject/delete actions */
+.bb-btn--danger {
+  background: var(--danger-tint);
+  color: var(--danger);
+}
+.bb-btn--danger:hover:not(:disabled) {
+  background: var(--danger);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.bb-btn__icon {
+  display: inline-flex;
+  align-items: center;
+}

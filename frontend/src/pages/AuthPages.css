@@ -1,0 +1,55 @@
+.bb-auth {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+.bb-auth__card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+  box-shadow: var(--shadow-md);
+}
+
+.bb-auth__card h2 {
+  font-size: var(--fs-2xl);
+}
+
+.bb-auth__card > p {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.bb-auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bb-auth__error {
+  background: var(--danger-tint);
+  color: var(--danger);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.bb-auth__switch {
+  text-align: center;
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--ink-muted);
+}
+
+.bb-auth__switch a {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.bb-auth__switch a:hover {
+  text-decoration: underline;
+}

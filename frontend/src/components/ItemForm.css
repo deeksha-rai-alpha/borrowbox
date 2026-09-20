@@ -1,0 +1,27 @@
+.bb-itemform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 640px;
+}
+
+.bb-itemform__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.bb-itemform__error {
+  background: var(--danger-tint);
+  color: var(--danger);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 600px) {
+  .bb-itemform__row {
+    grid-template-columns: 1fr;
+  }
+}

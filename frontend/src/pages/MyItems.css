@@ -1,0 +1,21 @@
+.bb-myitems__header {
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.bb-myitems__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bb-myitems__actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.bb-myitems__actions > a,
+.bb-myitems__actions > button {
+  flex: 1;
+}

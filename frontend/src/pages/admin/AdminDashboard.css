@@ -1,0 +1,33 @@
+.bb-admin__stats {
+  margin-bottom: var(--space-7);
+}
+
+.bb-admin__charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.bb-admin__chart-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.bb-admin__chart-card h4 {
+  margin-bottom: var(--space-3);
+}
+
+.bb-admin__chart-card--wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .bb-admin__charts {
+    grid-template-columns: 1fr;
+  }
+  .bb-admin__chart-card--wide {
+    grid-column: span 1;
+  }
+}

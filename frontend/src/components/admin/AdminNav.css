@@ -1,0 +1,26 @@
+.bb-adminnav {
+  display: inline-flex;
+  gap: var(--space-1);
+  background: var(--surface-tint);
+  padding: 5px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-6);
+}
+
+.bb-adminnav__link {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-muted);
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.bb-adminnav__link:hover {
+  color: var(--ink);
+}
+
+.bb-adminnav__link.is-active {
+  background: var(--ink);
+  color: #fff;
+}

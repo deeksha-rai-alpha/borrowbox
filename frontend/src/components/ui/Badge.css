@@ -1,0 +1,24 @@
+.bb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  text-transform: capitalize;
+}
+
+.bb-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.bb-badge--success { background: var(--success-tint); color: var(--success); }
+.bb-badge--warning { background: var(--warning-tint); color: var(--warning); }
+.bb-badge--danger { background: var(--danger-tint); color: var(--danger); }
+.bb-badge--info { background: var(--info-tint); color: var(--info); }
+.bb-badge--purple { background: var(--purple-tint); color: var(--purple-deep); }
